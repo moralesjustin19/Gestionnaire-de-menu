@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password ="";
+$dbname ="gestionnaire_menu";
+
+try {
+    $bdd = new PDO("mysql:host=$servername;dbname=gestionnaire_menu", $username, $password);
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
     
-</body>
-</html>
+    echo "Erreur de connexion : " . $e->getMessage();
+}
