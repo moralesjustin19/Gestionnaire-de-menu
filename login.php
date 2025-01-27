@@ -59,11 +59,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="password" id="pass" name="pass" placeholder="Entrez votre mot de passe" required>
     <br>
     <input type="submit" value="Se connecter" name="ok">
-</form>
-
-<?php if (!empty($error_msg)) : ?>
+    <?php if (!empty($error_msg)) : ?>
     <p style="color: red;"><?php echo htmlspecialchars($error_msg); ?></p>
 <?php endif; ?>
 
+</form>
 </body>
 </html>
