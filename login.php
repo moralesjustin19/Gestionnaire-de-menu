@@ -9,6 +9,7 @@
 <body>
 
 <?php
+session_start();
 
 $servername = "localhost";
 $username = "root";
@@ -23,7 +24,7 @@ try {
     exit;
 }
 
-// Initialisation de la variable pour éviter l'erreur "Undefined variable"
+
 $error_msg = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -40,7 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $rep = $stmt->fetch();
         if ($rep) {
-            header ("Location: index.php");
+            $_SESSION['username'] = $username;
+            header ("Location: accueil.php");
+            exit;
 
         } else {
             $error_msg = "Nom d'utilisateur ou mot de passe incorrect !";
@@ -62,7 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php if (!empty($error_msg)) : ?>
     <p style="color: red;"><?php echo htmlspecialchars($error_msg); ?></p>
 <?php endif; ?>
-
 </form>
 </body>
 </html>
