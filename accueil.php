@@ -27,7 +27,7 @@ $username = $_SESSION['username']
     </nav>
 </header>
 <body>
-   <h1 class="hello">Bonjour <?php echo htmlspecialchars($username); ?> !</h1>
+   <h1 class="hello">Bonjour,  <?php echo htmlspecialchars($username); ?> !</h1>
    <h2 class="desc">Bienvenue sur votre page d'accueil.</h2>
    
 </body>
