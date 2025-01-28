@@ -170,15 +170,15 @@
       -o-transform: translate(5%, 0%);
     }
   }
-
+  
   body{
     font-family: Arial, sans-serif;
   }
-
+  
   h1{
     color: aliceblue;
   }
-
+  
   .header {
     background-color: #333533;
     position: fixed;
@@ -191,7 +191,7 @@
     margin-top: -1.5%;
     margin-right: -0.5%;
     }
-
+  
     .header p {
       color: aliceblue;
     }
@@ -221,105 +221,105 @@
       color: #d4d4d4; 
       text-decoration: underline; 
   }
-
+  
   header nav {
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-header nav a {
+  }
+  
+  header nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-}
-
-header nav a.active,
-header nav a:hover {
+  }
+  
+  header nav a.active,
+  header nav a:hover {
     background-color: #ff7043;
-}
-
-main {
+  }
+  
+  main {
   margin-left: 4%;
   margin-bottom: -1%;
-}
+  }
   
-.container{
+  .container{
     background-color: #333533;
     display: flex;
     flex-direction: column;
     margin-top: 0.5;
     margin-right: -0.5%;
-}
-
-.menus {
+  }
+  
+  .menus {
   background-color: aqua;
   margin-left: 9%;
   margin-top: 6%;
   display: flex;
   justify-content: center;
   justify-content: space-around;
-}
-
-.pizzas {
+  }
+  
+  .pizzas {
   background-color: violet;
   margin-left: 9%;
   margin-top: 6%;
   display: flex;
   justify-content: center;
   justify-content: space-around;
-}
-
-.pizza1 , .pizza2 , .pizza3 , .pizza4 , .pizza5 , .pizza6{
+  }
+  
+  .pizza1 , .pizza2 , .pizza3 , .pizza4 , .pizza5 , .pizza6{
   background-color: whitesmoke;
   width: 200px;
   height: 200px;
   border-radius: 5px;
   box-shadow: #d4d4d4;
   text-align: center; 
-}
-
-.menus, .pizzas {
+  }
+  
+  .menus, .pizzas {
   min-height: 600px; /* Ajoutez une hauteur minimale */
-}
-
-.menu1 , .menu2 , .menu3 , .menu4{
-background-color: whitesmoke;
-width: 200px;
-height: 200px;
-border-radius: 5px;
-box-shadow: #d4d4d4;
-text-align: center;
-}
-
-.main2{
+  }
+  
+  .menu1 , .menu2 , .menu3 , .menu4{
+  background-color: whitesmoke;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: #d4d4d4;
+  text-align: center;
+  }
+  
+  .main2{
   margin-left: 10%;
   background-color: #ff7043;
-}
-
-table {
+  }
+  
+  table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-}
-
-table thead {
+  }
+  
+  table thead {
   background-color: #ff7043;
   color: white;
-}
-
-table th, table td {
+  }
+  
+  table th, table td {
   text-align: left;
   padding: 10px;
   border: 1px solid #ddd;
-}
-
-table tbody tr:nth-child(even) {
+  }
+  
+  table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
-}
-
-table tbody tr:hover {
+  }
+  
+  table tbody tr:hover {
   background-color: #ffe0b2;
-}
+  }
