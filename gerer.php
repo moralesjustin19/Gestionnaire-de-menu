@@ -32,7 +32,7 @@ $menus = $requeteMenus->fetchAll(PDO::FETCH_ASSOC);
 <header>
     <nav>
         <a class="active" href="accueil.php">Accueil</a>
-        <a href="#">Notre carte</a>
+        <a href="restaurant_menu">Notre carte</a>
         <a href="logout.php">Se déconnecter</a>
     </nav>
 </header>
