@@ -1,4 +1,17 @@
 <?php
+
+$servername = "localhost";
+$username = "root";
+$password ="";
+$dbname ="gestionnaire_menu";
+
+try {
+    $bdd = new PDO("mysql:host=$servername;dbname=gestionnaire_menu", $username, $password);
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    
+    echo "Erreur de connexion : " . $e->getMessage();
+}
 ?>
 
 <!DOCTYPE html>
@@ -296,7 +309,7 @@
                   <section>
                     <p class="pizza4">Kebab</p>
                     <p class="pizza5">4 Fromages</p>
-                    <p class="pizza6">Tartiflette</p>
+                    <p class="pizza6">Pizza Royale</p>
                   </section>
               </div>
               </div>
