@@ -21,8 +21,7 @@ $username = $_SESSION['username']
 <header>
     <nav>
         <a class="active" href="accueil.php">Accueil</a>
-        <a href="restaurant_menu.php">Menu</a>
-        <a href="#">Plats</a>
+        <a href="restaurant_menu.php">Notre carte</a>
         <a href="gerer.php">Gestion</a>
         <a href="logout.php">Se déconnecter</a>
 

@@ -28,8 +28,7 @@ $pizzas = $requete->fetchAll(PDO::FETCH_ASSOC);
 <header>
     <nav>
         <a class="active" href="accueil.php">Accueil</a>
-        <a href="#">Menu</a>
-        <a href="#">Plats</a>
+        <a href="#">Plats & Menus</a>
         <a href="logout.php">Se déconnecter</a>
     </nav>
 </header>
@@ -54,6 +53,7 @@ $pizzas = $requete->fetchAll(PDO::FETCH_ASSOC);
                     echo "<td>" . htmlspecialchars($pizza['nom']) . "</td>"; // Affiche le nom de la pizza
                     echo "<td>" . htmlspecialchars($pizza['ingredients']) . "</td>"; // Affiche les ingrédients
                     echo "<td>" . htmlspecialchars($pizza['prix']) . "€</td>"; // Affiche le prix
+                    
                     echo "<td>
                           
                           </td>";
