@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    margin-left: 40%;
+    margin-left: 42%;
     margin-top: 17%;
     background-color: #202020;
 }
@@ -41,7 +41,22 @@ nav a:hover {
     text-decoration: underline; 
 }
 
-main {
-    margin-left: 220px; 
-    padding: 20px;
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+header nav a.active,
+header nav a:hover {
+    background-color: #ff7043;
 }

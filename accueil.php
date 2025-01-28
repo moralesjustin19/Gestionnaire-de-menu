@@ -15,16 +15,16 @@ $username = $_SESSION['username']
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet/accueil.css">
+    <link rel="stylesheet" href="stylesheet/home.css">
     <title>Accueil</title>
 </head>
 <header>
     <nav>
         <a class="active" href="accueil.php">Accueil</a>
-        <a href="#">Menu</a>
+        <a href="restaurant_menu.php">Menu</a>
         <a href="#">Plats</a>
-        <a href="#">Se déconnecter</a>
         <a href="gerer.php">Gestion</a>
+        <a href="logout.php">Se déconnecter</a>
 
         
     </nav>
