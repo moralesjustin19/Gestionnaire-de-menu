@@ -268,8 +268,8 @@
         <section>
             <nav class="LeftNavbar">
               <a class="active" href="accueil.php">Accueil</a>
-              <a href="#">Menu</a>
-              <a href="#">Plats</a>
+              <a href="restaurant_menu">Menu</a>
+              <a href="gerer.php">Gestion</a>
               <a href="logout.php">Se déconnecter</a>
             </nav>
         </section>
