@@ -24,6 +24,9 @@ $username = $_SESSION['username']
         <a href="#">Menu</a>
         <a href="#">Plats</a>
         <a href="#">Se déconnecter</a>
+        <a href="gerer.php">Gestion</a>
+
+        
     </nav>
 </header>
 <body>
