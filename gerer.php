@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 
 session_start();
 if (!isset($_SESSION['username'])) {
@@ -12,13 +11,6 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "gestionnaire_menu";
-=======
-    // Connexion à la base de données
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "gestionnaire_menu";
->>>>>>> fa7b79964d9df8afcd227a051bc4ad00a40b9774
 
     try {
         $bdd = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -27,26 +19,15 @@ $dbname = "gestionnaire_menu";
         echo "Erreur de connexion : " . $e->getMessage();
     }
 
-<<<<<<< HEAD
 
 // Récupérer les pizzas depuis la base de données
-$requete = $bdd->query("SELECT * FROM gestion"); /
+$requete = $bdd->query("SELECT * FROM gestion"); 
 $pizzas = $requete->fetchAll(PDO::FETCH_ASSOC);
 
 // Récupérer les menus depuis la base de données
 $requeteMenus = $bdd->query("SELECT * FROM gestion_menu"); 
 $menus = $requeteMenus->fetchAll(PDO::FETCH_ASSOC);
 ?>
-=======
-    // Récupérer les pizzas depuis la base de données
-    $requete = $bdd->query("SELECT * FROM gestion"); // Assurez-vous que la table s'appelle bien 'gestion'
-    $pizzas = $requete->fetchAll(PDO::FETCH_ASSOC);
-
-    // Récupérer les menus depuis la base de données
-    $requeteMenus = $bdd->query("SELECT * FROM gestion_menu"); // Assurez-vous que la table s'appelle bien 'menus'
-    $menus = $requeteMenus->fetchAll(PDO::FETCH_ASSOC);
-    ?>
->>>>>>> fa7b79964d9df8afcd227a051bc4ad00a40b9774
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,6 +35,10 @@ $menus = $requeteMenus->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet/gestion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">	
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='font'>
     <title>Accueil</title>
 </head>
 <header>
