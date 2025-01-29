@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php"); 
+    exit;
+}
+
 // Connexion à la base de données
 $servername = "localhost";
 $username = "root";
@@ -12,12 +19,13 @@ try {
     echo "Erreur de connexion : " . $e->getMessage();
 }
 
+
 // Récupérer les pizzas depuis la base de données
-$requete = $bdd->query("SELECT * FROM gestion"); // Assurez-vous que la table s'appelle bien 'gestion'
+$requete = $bdd->query("SELECT * FROM gestion"); /
 $pizzas = $requete->fetchAll(PDO::FETCH_ASSOC);
 
 // Récupérer les menus depuis la base de données
-$requeteMenus = $bdd->query("SELECT * FROM gestion_menu"); // Assurez-vous que la table s'appelle bien 'menus'
+$requeteMenus = $bdd->query("SELECT * FROM gestion_menu"); 
 $menus = $requeteMenus->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
