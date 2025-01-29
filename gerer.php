@@ -62,16 +62,18 @@ $menus = $requeteMenus->fetchAll(PDO::FETCH_ASSOC);
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    // Afficher dynamiquement les pizzas
-                    foreach ($pizzas as $pizza) {
-                        echo "<tr>";
-                        echo "<td>" . htmlspecialchars($pizza['nom']) . "</td>"; // Affiche le nom de la pizza
-                        echo "<td>" . htmlspecialchars($pizza['ingredients']) . "</td>"; // Affiche les ingrédients
-                        echo "<td>" . htmlspecialchars($pizza['prix']) . "€</td>"; // Affiche le prix
-                    }
-                    ?>
-                </tbody>
+                <?php foreach ($pizzas as $pizza): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($pizza['nom']) ?></td>
+                        <td><?= htmlspecialchars($pizza['ingredients']) ?></td>
+                        <td><?= htmlspecialchars($pizza['prix']) ?>€</td>
+                        <td>
+                            <button class="btn modifier">Modifier</button>
+                            <button class="btn supprimer">Supprimer</button>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
             </table>
         </section>
 
@@ -103,18 +105,18 @@ $menus = $requeteMenus->fetchAll(PDO::FETCH_ASSOC);
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    // Afficher dynamiquement les menus
-                    foreach ($menus as $menu) {
-                        echo "<tr>";
-                        echo "<td>" . htmlspecialchars($menu['nom']) . "</td>"; // Affiche le nom du menu
-                        echo "<td>" . htmlspecialchars($menu['description']) . "</td>"; // Affiche la description
-                        echo "<td>" . htmlspecialchars($menu['prix']) . "€</td>"; // Affiche le prix
-                        
-                        
-                    }
-                    ?>
-                </tbody>
+                <?php foreach ($pizzas as $pizza): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($pizza['nom']) ?></td>
+                        <td><?= htmlspecialchars($pizza['ingredients']) ?></td>
+                        <td><?= htmlspecialchars($pizza['prix']) ?>€</td>
+                        <td>
+                            <button class="btn modifier">Modifier</button>
+                            <button class="btn supprimer">Supprimer</button>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
             </table>
         </section>
 

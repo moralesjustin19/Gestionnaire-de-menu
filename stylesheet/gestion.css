@@ -173,3 +173,30 @@ form button {
 form button:hover {
     background-color: #ff7043;
 }
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.modifier {
+    background-color: #3498db;
+    color: white;
+}
+
+.modifier:hover {
+    background-color: #2980b9;
+}
+
+.supprimer {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.supprimer:hover {
+    background-color: #c0392b;
+}
