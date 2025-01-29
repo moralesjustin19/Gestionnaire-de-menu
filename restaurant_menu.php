@@ -6,12 +6,23 @@ $password ="";
 $dbname ="gestionnaire_menu";
 
 try {
-    $bdd = new PDO("mysql:host=$servername;dbname=gestionnaire_menu", $username, $password);
+    $bdd = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     
     echo "Erreur de connexion : " . $e->getMessage();
 }
+
+$getMenu = $bdd->prepare("SELECT * FROM `gestion`");
+$getMenu->execute();
+
+$menus = $getMenu->fetchAll(PDO::FETCH_ASSOC);
+
+
+$getgestionMenu = $bdd->prepare("SELECT * FROM `gestion_menu`");
+$getgestionMenu->execute();
+
+$gestionMenu = $getgestionMenu->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -280,7 +291,7 @@ try {
         <section>
             <nav class="LeftNavbar">
               <a class="active" href="accueil.php">Accueil</a>
-              <a href="restaurant_menu">Menu</a>
+              <a href="restaurant_menu">Notre Carte</a>
               <a href="gerer.php">Gestion</a>
               <a href="logout.php">Se déconnecter</a>
             </nav>
@@ -313,23 +324,44 @@ try {
               </div>
               </div>
         </section>
-        <section class="main2">
-          <h2>Menus</h2>
+        <div class="main2">
+          <h2>Pizzas</h2>
           <table border="1">
             <thead>
               <tr>
-                <th>Format</th>
-                <th>Plats</th>
+                <th>Nom</th>
+                <th>Ingrédients</th>
                 <th>Prix</th>
               </tr>
             </thead>
             <tbody>
               <?php
-              foreach ($menus as $menu) {
+              foreach ($menus as $key => $value) {
                 echo "<tr>";
-                echo "<td>". htmlspecialchars($pizza['format']) . "</td>";
-                echo "<td>". htmlspecialchars($pizza['plats']) . "</td>";
-                echo "<td>". htmlspecialchars($pizza['prix']) . "</td>";
+                echo "<td>". htmlspecialchars($value['nom']) . "</td>";
+                echo "<td>". htmlspecialchars($value['ingredients']) . "</td>";
+                echo "<td>". htmlspecialchars($value['prix']) . "</td>";
+              }
+              ?>
+            </tbody>
+          </table>
+        </section>
+        <div class="main3">
+          <h2>Menus</h2>
+          <table border="1">
+            <tr>
+              <th>Nom</th>
+              <th>Description</th>
+              <th>Prix</th>
+            </tr>
+            </thead>
+            <tbody>
+              <?php
+              foreach($gestionMenu as $key => $value) {
+                echo "<tr>";
+                echo "<td>". htmlspecialchars($value['nom']) . "</td>";
+                echo "<td>". htmlspecialchars($value['description']) . "</td>";
+                echo "<td>". htmlspecialchars($value['prix']) . "</td>";
               }
               ?>
             </tbody>
