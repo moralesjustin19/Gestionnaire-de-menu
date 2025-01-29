@@ -1,4 +1,17 @@
 <?php
+
+$servername = "localhost";
+$username = "root";
+$password ="";
+$dbname ="gestionnaire_menu";
+
+try {
+    $bdd = new PDO("mysql:host=$servername;dbname=gestionnaire_menu", $username, $password);
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    
+    echo "Erreur de connexion : " . $e->getMessage();
+}
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +20,6 @@
     <link rel="stylesheet" href="stylesheet/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>accueil</title>
 </head>
@@ -268,8 +280,8 @@
         <section>
             <nav class="LeftNavbar">
               <a class="active" href="accueil.php">Accueil</a>
-              <a href="#">Menu</a>
-              <a href="#">Plats</a>
+              <a href="restaurant_menu">Menu</a>
+              <a href="gerer.php">Gestion</a>
               <a href="logout.php">Se déconnecter</a>
             </nav>
         </section>
@@ -296,7 +308,7 @@
                   <section>
                     <p class="pizza4">Kebab</p>
                     <p class="pizza5">4 Fromages</p>
-                    <p class="pizza6">Tartiflette</p>
+                    <p class="pizza6">Pizza Royale</p>
                   </section>
               </div>
               </div>

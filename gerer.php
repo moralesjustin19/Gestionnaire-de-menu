@@ -21,22 +21,22 @@
     $menus = $requeteMenus->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="stylesheet/gestion.css">
-        <title>Accueil</title>
-    </head>
-    <header>
-        <nav>
-            <a class="active" href="accueil.php">Accueil</a>
-            <a href="#">Notre carte</a>
-            <a href="logout.php">Se déconnecter</a>
-        </nav>
-    </header>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet/gestion.css">
+    <title>Accueil</title>
+</head>
+<header>
+    <nav>
+        <a class="active" href="accueil.php">Accueil</a>
+        <a href="restaurant_menu">Notre carte</a>
+        <a href="logout.php">Se déconnecter</a>
+    </nav>
+</header>
+<body>
 
         <section>
             <h2>Liste des Pizzas</h2>

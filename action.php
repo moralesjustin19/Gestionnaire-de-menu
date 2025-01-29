@@ -29,7 +29,7 @@ if (isset($_POST['ok'])){
             "prix" => $prix,
         )
     );
-    $reponse = $requete->fetchAll(PDO::FETCH_ASSOC);
-    var_dump($reponse);
+    header("Location: gerer.php");
+    exit; // Assurez-vous de stopper l'exécution après la redirection
 }
 ?>
