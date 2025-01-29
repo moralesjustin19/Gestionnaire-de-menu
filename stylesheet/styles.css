@@ -172,29 +172,27 @@
 }
 
 body{
-  font-family: Arial, sans-serif;
+font-family: Arial, sans-serif;
+}
+h1{
+color: aliceblue;
+}
+.header {
+background-color: #333533;
+position: fixed;
+right: 0;
+width: 95%;
+height: 15%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+margin-top: -1.5%;
+margin-right: -0.5%;
 }
 
-h1{
+.header p {
   color: aliceblue;
 }
-
-.header {
-  background-color: #333533;
-  position: fixed;
-  right: 0;
-  width: 95%;
-  height: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: -1.5%;
-  margin-right: -0.5%;
-  }
-
-  .header p {
-    color: aliceblue;
-  }
   
   .LeftNavbar {
     background-color: #333533;
@@ -301,6 +299,10 @@ background-color: whitesmoke;
 
 .main3 {
   background-color: whitesmoke;
+}
+header nav a.active,
+header nav a:hover {
+background-color: #ff7043;
 }
 
 table {
