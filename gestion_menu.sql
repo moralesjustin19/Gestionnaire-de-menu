@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 28 jan. 2025 à 13:40
+-- Généré le : mar. 28 jan. 2025 à 15:33
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.3.14
 
@@ -34,14 +34,17 @@ CREATE TABLE IF NOT EXISTS `gestion_menu` (
   `description` text NOT NULL,
   `prix` int NOT NULL,
   PRIMARY KEY (`id_menu`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `gestion_menu`
 --
 
 INSERT INTO `gestion_menu` (`id_menu`, `nom`, `description`, `prix`) VALUES
-(1, 'Menu crèche ', 'Pizza aux écoliers, cristaline', 3);
+(1, 'Menu simple', 'Pizza kebab ou 4 fromages + boisson ', 12),
+(3, 'Menu duo', '2 pizzas au choix + boisson ', 22),
+(4, 'Menu Famille', '4 Pizzas +boisson ', 35),
+(5, 'Menu étudiant', 'Pizza marguerita + boisson', 9);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

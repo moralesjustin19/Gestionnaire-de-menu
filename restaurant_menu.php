@@ -1,13 +1,25 @@
 <?php
-?>  
+
+$servername = "localhost";
+$username = "root";
+$password ="";
+$dbname ="gestionnaire_menu";
+
+try {
+    $bdd = new PDO("mysql:host=$servername;dbname=gestionnaire_menu", $username, $password);
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    
+    echo "Erreur de connexion : " . $e->getMessage();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesheet/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>accueil</title>
 </head>
@@ -16,7 +28,7 @@
         <section>
             <div class="header">
                 <h1 class="logoTxt">PIZZA GUSTOSO</h1>
-                <div class="main">
+                <div class="icone">
                 <svg
                   width="168"
                   height="158"
@@ -263,22 +275,70 @@
               </g>
               </g>
               </svg>
-</div>
             </div>
-                <div class="icone">
-                    <!-- From Uiverse.io by AkshatDaxini --> 
-  
-
-                </div>
         </section>
         <section>
             <nav class="LeftNavbar">
-                <a class="active" href=".php">Accueil</a>
-                <a href=".php">gestionplats</a>
-                <a href=".php">gestionusers</a>
-                <a href=".php">gestioningredients</a>
+              <a class="active" href="accueil.php">Accueil</a>
+              <a href="restaurant_menu">Menu</a>
+              <a href="gerer.php">Gestion</a>
+              <a href="logout.php">Se déconnecter</a>
             </nav>
         </section>
-
     </header>
     <main>
+        <section>
+              <div class = "container">
+                  <div class = "menus">
+                <section>
+                    <p class="menu1">Menu simple</p>
+                    <p class="menu2">Menu Duo</p>
+                </section>
+                <section>
+                    <p class="menu3">Menu Famille</p>
+                    <p class="menu4">Menu étudiant</p>
+                  </div>
+                </section>
+              <div class = "pizzas">
+                  <section>
+                    <p class="pizza1">Savoyarde</p>
+                    <p class="pizza2">Chèvre-miel</p>
+                    <p class="pizza3">Marguerita</p>
+                  </section>
+                  <section>
+                    <p class="pizza4">Kebab</p>
+                    <p class="pizza5">4 Fromages</p>
+                    <p class="pizza6">Pizza Royale</p>
+                  </section>
+              </div>
+              </div>
+        </section>
+        <section class="main2">
+          <h2>Menus</h2>
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Format</th>
+                <th>Plats</th>
+                <th>Prix</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              foreach ($menus as $menu) {
+                echo "<tr>";
+                echo "<td>". htmlspecialchars($pizza['format']) . "</td>";
+                echo "<td>". htmlspecialchars($pizza['plats']) . "</td>";
+                echo "<td>". htmlspecialchars($pizza['prix']) . "</td>";
+              }
+              ?>
+            </tbody>
+          </table>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
