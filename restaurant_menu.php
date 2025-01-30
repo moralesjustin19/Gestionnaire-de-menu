@@ -298,32 +298,24 @@ $gestionMenu = $getgestionMenu->fetchAll(PDO::FETCH_ASSOC);
         </section>
     </header>
     <main>
-        <section>
-              <div class = "container">
-                  <div class = "menus">
-                <section>
-                    <p class="menu1">Menu simple</p>
-                    <p class="menu2">Menu Duo</p>
-                </section>
-                <section>
-                    <p class="menu3">Menu Famille</p>
-                    <p class="menu4">Menu étudiant</p>
-                  </div>
-                </section>
-              <div class = "pizzas">
-                  <section>
-                    <p class="pizza1">Savoyarde</p>
-                    <p class="pizza2">Chèvre-miel</p>
-                    <p class="pizza3">Marguerita</p>
-                  </section>
-                  <section>
-                    <p class="pizza4">Kebab</p>
-                    <p class="pizza5">4 Fromages</p>
-                    <p class="pizza6">Pizza Royale</p>
-                  </section>
-              </div>
-              </div>
-        </section>
+      <section class="section1">
+        <div class="titremain">
+        <h2>Nos Offres</h2>
+        </div>
+        <div class="main1">
+          <img class="mosaique" src="assets/images/menu1.jpg" width="150px" height="150px">
+          <img class="mosaique" src="assets/images/menu2.jpg" width="150px" height="150px">
+          <img class="mosaique" src="assets/images/menu3.jpg" width="150px" height="150px">
+          <img class="mosaique" src="assets/images/menu4.jpg" width="150px" height="150px">
+          <img class="mosaique" src="assets/images/pizza1.jpg" width="150px" height="150px">
+          <img class="mosaique" src="assets/images/pizza2.jpg" width="150px" height="150px">
+          <img class="mosaique" src="assets/images/pizza3.jpg" width="150px" height="150px">
+          <img class="mosaique" src="assets/images/pizza4.jpg" width="150px" height="150px">
+          <img class="mosaique" src="assets/images/pizza5.jpg" width="150px" height="150px">
+          <img class="mosaique" src="assets/images/pizza6.jpg" width="150px" height="150px">
+        </div>
+      </section>
+      <section>
         <div class="main2">
           <h2>Pizzas</h2>
           <table border="1">
@@ -345,10 +337,12 @@ $gestionMenu = $getgestionMenu->fetchAll(PDO::FETCH_ASSOC);
               ?>
             </tbody>
           </table>
-        </section>
+      </section>
+      <section>
         <div class="main3">
           <h2>Menus</h2>
           <table border="1">
+            <thead>
             <tr>
               <th>Nom</th>
               <th>Description</th>
@@ -366,7 +360,7 @@ $gestionMenu = $getgestionMenu->fetchAll(PDO::FETCH_ASSOC);
               ?>
             </tbody>
           </table>
-        </section>
+      </section>
     </main>
 
     <footer>
