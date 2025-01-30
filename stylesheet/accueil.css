@@ -1,23 +1,24 @@
-
+/* Base styles */
 body {
     font-family: "Poppins", serif;
     padding: 0;
     margin: 0;
-    margin-left: 42%;
-    margin-top: 17%;
+    margin-left: 35%;
+    margin-top: 20%;
     background-color: #202020;
 }
 
 .hello {
     font-size: 80px;
-    color:rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
 }
 
 .desc {
-    font-size: 25px ;
+    font-size: 25px;
     color: white;
 }
 
+/* Navigation */
 nav {
     background-color: #333533;
     color: white;
@@ -32,18 +33,18 @@ nav {
 }
 
 nav a {
-    color: white; 
-    text-decoration: none; 
-    margin: 10px 0; 
-    font-size: 18px; 
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 18px;
 }
 
 nav a:hover {
-    color: #d4d4d4; 
-    text-decoration: underline; 
+    color: #d4d4d4;
+    text-decoration: underline;
 }
 
-
+/* Header styles */
 header nav {
     display: flex;
     justify-content: center;
@@ -61,4 +62,73 @@ header nav a {
 header nav a.active,
 header nav a:hover {
     background-color: #ff7043;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+
+    .hello {
+        font-size: 50px;
+    }
+
+    .desc {
+        font-size: 20px;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 0px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    header nav {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    header nav a {
+        padding: 0.5rem;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    .hello {
+        font-size: 40px;
+    }
+
+    .desc {
+        font-size: 18px;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    header nav {
+        gap: 10px;
+    }
+
+    header nav a {
+        padding: 0.5rem;
+        font-size: 14px;
+    }
 }
