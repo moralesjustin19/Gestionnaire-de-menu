@@ -30,6 +30,6 @@ if (isset($_POST['ok'])){
         )
     );
     header("Location: gerer.php");
-    exit; // Assurez-vous de stopper l'exécution après la redirection
+    exit; 
 }
 ?>
