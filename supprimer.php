@@ -1,13 +1,11 @@
 <?php
 session_start();
 
-// Vérifier si l'utilisateur est bien connecté
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit;
 }
 
-// Connexion à la base de données
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -21,15 +19,14 @@ try {
     exit;
 }
 
-// Vérifier si un ID et un type ont été passés en paramètre
 if (isset($_GET['id']) && isset($_GET['type'])) {
     $id = intval($_GET['id']);
     $type = $_GET['type'];
 
     if ($type == "pizza") {
-        $requete = $bdd->prepare("DELETE FROM gestion WHERE id = :id");
+        $requete = $bdd->prepare("DELETE FROM gestion WHERE id_gestion = :id");
     } elseif ($type == "menu") {
-        $requete = $bdd->prepare("DELETE FROM gestion_menu WHERE id = :id");
+        $requete = $bdd->prepare("DELETE FROM gestion_menu WHERE id_menu = :id");
     } else {
         echo "Type invalide.";
         exit;
@@ -38,7 +35,6 @@ if (isset($_GET['id']) && isset($_GET['type'])) {
     $requete->execute(['id' => $id]);
 }
 
-// Redirection vers la page de gestion après suppression
-header("Location: gestion.php");
+header("Location: gerer.php");
 exit;
 ?>
