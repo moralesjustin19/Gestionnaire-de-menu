@@ -1,88 +1,76 @@
-
+/* --- STYLE GLOBAL --- */
 body {
-    padding: 0;
-    margin: 0;
-    margin-left: 42%;
-    margin-top: 17%;
+    font-family: Arial, sans-serif;
     background-color: #202020;
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
+/* --- TITRES & TEXTES --- */
 .hello {
     font-size: 80px;
-    color:white
+    color: white;
 }
 
 .desc {
-    font-size: 25px ;
+    font-size: 25px;
     color: white;
 }
 
+/* --- NAVIGATION --- */
 nav {
     background-color: #333533;
-    color: white;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    width: 220px;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
 }
 
 nav a {
-    color: white; 
-    text-decoration: none; 
-    margin: 10px 0; 
-    font-size: 18px; 
-}
-
-nav a:hover {
-    color: #d4d4d4; 
-    text-decoration: underline; 
-}
-
-main {
-    margin-left: 220px; 
-    padding: 20px;
-}
-
-/* Style général */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-}
-
-
-header nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-header nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    margin: 10px 0;
+    font-size: 18px;
 }
 
-header nav a.active,
-header nav a:hover {
+nav a.active,
+nav a:hover {
     background-color: #ff7043;
 }
 
-/* Titre principal */
-h1 {
-    text-align: center;
-    color: #333;
-    margin-top: 1.5rem;
+/* --- MENU BURGER --- */
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    color: white;
+    background-color: #ff7043;
+    padding: 10px 15px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
 }
 
-/* Sections */
+/* --- CONTENU PRINCIPAL --- */
+main {
+    margin-left: 220px;
+    padding: 20px;
+    width: calc(100% - 220px);
+}
+
+/* --- SECTIONS --- */
 section {
     margin: 20px auto;
     padding: 20px;
@@ -90,6 +78,7 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 800px;
+    color: black;
 }
 
 section h2 {
@@ -97,7 +86,7 @@ section h2 {
     margin-bottom: 15px;
 }
 
-/* Tableau des pizzas */
+/* --- TABLEAU --- */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -123,7 +112,6 @@ table tbody tr:hover {
     background-color: #ffe0b2;
 }
 
-/* Liens dans le tableau */
 table a {
     color: #ff4500;
     text-decoration: none;
@@ -134,7 +122,7 @@ table a:hover {
     text-decoration: underline;
 }
 
-/* Formulaire d'ajout */
+/* --- FORMULAIRES --- */
 form {
     display: flex;
     flex-direction: column;
@@ -175,6 +163,7 @@ form button:hover {
     background-color: #ff7043;
 }
 
+/* --- BOUTONS --- */
 .btn {
     padding: 10px 15px;
     border: none;
@@ -200,4 +189,66 @@ form button:hover {
 
 .supprimer:hover {
     background-color: #c0392b;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media screen and (max-width: 1024px) {
+    nav {
+        width: 180px;
+    }
+
+    main {
+        margin-left: 190px;
+        width: calc(100% - 190px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    nav {
+        transform: translateX(-100%);
+        width: 220px;
+        position: fixed;
+        height: 100vh;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    section {
+        width: 95%;
+    }
+
+    form {
+        width: 100%;
+    }
 }
