@@ -270,22 +270,57 @@ table tbody tr:hover {
 background-color: #ffe0b2;
 }
 
-.main2, .main3, .main1 , .titremain {
+.main2, .main3, .main1 {
+    margin-left: 15%;
+  
+    h2 { 
+      padding-top: 10%; 
+      text-align: center;
+      text-decoration: underline;
+    }
+}
+
+.titremain {
   margin-left: 15%;
-
-  h2 { 
-    padding-top: 10%;
-  }
+  
+    h2 { 
+      padding-top: 10%; 
+      text-align: center;
+      margin-bottom: 5%;
+      text-decoration: underline;
+    }
 }
 
-.section1 {
-  width: 100%;
-}
-
-.main1{
-  background-color: #ff7043;
+.section2 {
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
+  flex-direction: column;
 }
 
+.imgmenu {
+  margin-left: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.imgpizza {
+  margin-left: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.imgpizza1 {
+  margin-left: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.mosaique {
+  border: 2px solid black; /* Bordure pour chaque produit */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour un effet */
+}

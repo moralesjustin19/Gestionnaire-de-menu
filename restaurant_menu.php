@@ -304,19 +304,26 @@ $gestionMenu = $getgestionMenu->fetchAll(PDO::FETCH_ASSOC);
         <div class="titremain">
         <h2>Nos Offres</h2>
         </div>
-        <div class="main1">
-          <img class="mosaique" src="assets/images/menu1.jpg" width="150px" height="150px">
-          <img class="mosaique" src="assets/images/menu2.jpg" width="150px" height="150px">
-          <img class="mosaique" src="assets/images/menu3.jpg" width="150px" height="150px">
-          <img class="mosaique" src="assets/images/menu4.jpg" width="150px" height="150px">
-          <img class="mosaique" src="assets/images/pizza1.jpg" width="150px" height="150px">
-          <img class="mosaique" src="assets/images/pizza2.jpg" width="150px" height="150px">
-          <img class="mosaique" src="assets/images/pizza3.jpg" width="150px" height="150px">
-          <img class="mosaique" src="assets/images/pizza4.jpg" width="150px" height="150px">
-          <img class="mosaique" src="assets/images/pizza5.jpg" width="150px" height="150px">
-          <img class="mosaique" src="assets/images/pizza6.jpg" width="150px" height="150px">
-        </div>
       </section>
+      <div class = "section2">
+        <div class = "imgmenu">
+            <img class ="mosaique" src="assets/images/menu1.jpg" width="150px" height="150px">
+            <img class ="mosaique" src="assets/images/menu2.jpg" width="150px" height="150px">
+            <img class ="mosaique" src="assets/images/menu3.jpg" width="150px" height="150px">
+            <img class ="mosaique" src="assets/images/menu4.jpg" width="150px" height="150px">
+        </div>
+        <div class = "imgpizza">
+            <img class ="mosaique" src="assets/images/pizza1.jpg" width="150px" height="150px">
+            <img class ="mosaique" src="assets/images/pizza2.jpg" width="150px" height="150px">
+            <img class ="mosaique" src="assets/images/pizza3.jpg" width="150px" height="150px">
+        </div>
+        <div class ="imgpizza1">
+            <img class ="mosaique" src="assets/images/pizza4.jpg" width="150px" height="150px">
+            <img class ="mosaique" src="assets/images/pizza5.jpg" width="150px" height="150px">
+            <img class ="mosaique" src="assets/images/pizza6.jpg" width="150px" height="150px">
+        </div>
+      </div>
+      
       <section>
         <div class="main2">
           <h2>Pizzas</h2>
